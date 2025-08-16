@@ -1,0 +1,7 @@
+use Cro::HTTP::Client;
+#!/usr/bin/env raku
+use v6.d;
+
+my $resp = await Cro::HTTP::Client.head();
+my $body = await $resp.body;
+shift $body;

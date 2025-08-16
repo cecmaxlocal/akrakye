@@ -1,0 +1,7 @@
+#!/usr/bin/env raku
+use v6.d;
+
+my $resp = Cro::HTTP::Client.post: ,
+content-type => 'www-form-urlencoded',
+body => {}; my $body = await $resp.body;
+shift $body; # a lives
